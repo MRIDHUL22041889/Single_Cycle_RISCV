@@ -12,6 +12,16 @@ This project is an implementation of a **single cycle RISC V core** that support
 - Testbench included for simulation and validation
 
 ---
+## 📁 Directory Structure
+
+riscv-core/
+├── sources/ # Verilog source files
+├── sim/ # Testbench and sample programs
+├── docs/ # Architecture diagrams and documentation
+├── README.md
+
+
+---
 
 📜 Supported Instructions
 Currently supports the RV32I subset, including:
