@@ -15,10 +15,14 @@ This project is an implementation of a **single cycle RISC V core** that support
 ## 📁 Directory Structure
 
 riscv-core/
-├── sources/ # Verilog source files
-├── sim/ # Testbench and sample programs
-├── docs/ # Architecture diagrams and documentation
-├── README.md
+├── sources/ # Verilog source files  
+
+├── sim/ # Testbench and sample programs  
+
+├── docs/ # Architecture diagrams and documentation  
+
+├── README.md  
+
 
 
 ---
