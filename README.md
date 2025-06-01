@@ -14,7 +14,8 @@ This project is an implementation of a **single cycle RISC V core** that support
 ---
 ## 📁 Directory Structure
 
-riscv-core/
+riscv-core/  
+
 ├── sources/ # Verilog source files  
 
 ├── sim/ # Testbench and sample programs  
