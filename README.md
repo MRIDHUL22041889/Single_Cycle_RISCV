@@ -28,7 +28,7 @@ riscv-core/
 
 ---
 
-📜 Supported Instructions
+## 📜 Supported Instructions
 Currently supports the RV32I subset, including:
 
 Arithmetic: ADD, SUB, AND, OR, XOR, SRL, SLL, SAR.
@@ -41,12 +41,12 @@ Control flow: BEQ, BNE, BLT, BGE ,JAL
 
 ---
 
-Architecture
+## Architecture
 It is heavily inspired from the one mentioned in Computer Organization and **Design – Patterson & Hennessy** with slight modifications in control signal by using a Flag register in ALU to implement BLT,BGE etc and each component is written in verilog with a modular design Philosophy making it easy to test each component indepently.
 
 ---
 
-🛠️ TODO
+## 🛠️ TODO
 -Add support for ECALL, LUI, AUIPC
 
 -Add pipelined version
