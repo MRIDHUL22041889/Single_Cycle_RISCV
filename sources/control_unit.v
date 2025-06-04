@@ -115,7 +115,7 @@ module control_unit(
             ALUControl = 3'b000;
             ResultSrc=2'b01;
         end
-        else if(branch)begin                                 //NOT COMPLETED
+        else if(branch)begin                                 
             ImmSrc=2'b10;
             ALUControl = 3'b001;
             is_equal = (Flag[0] == 1'b1);
