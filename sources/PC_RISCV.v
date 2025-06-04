@@ -21,15 +21,15 @@
 
 
 module PC(
-    input [31:0] a,     // This is PCNext from datapath
+    input [31:0] a,     
     input  clk,
     input reset,
-    output reg [31:0] b  // This is PC (output)
+    output reg [31:0] b 
 );
     always @(posedge clk or posedge reset) begin
         if(reset)
             b <= 32'h00000000; // Correct reset to 0
         else
-            b <= a;            // CORRECTED: Simply store the input 'a'
+            b <= a;            
     end
 endmodule
