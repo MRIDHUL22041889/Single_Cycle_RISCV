@@ -1,5 +1,6 @@
 # Single_Cycle_RISCV
-This project is an implementation of a **single cycle RISC V core** that supports **RV32I base integer instruction set**, it is written in Verilog and is designed for simplicity making it ideal for educational purposes.
+A fully functional single-cycle RISC-V processor implementing the **RV32I** base integer instruction set.
+Written in Verilog, this project is built for clarity, modularity — ideal for exploring CPU microarchitecture and digital design fundamentals.
 
 ---
 
@@ -27,8 +28,36 @@ riscv-core/
 
 
 ---
+## Test Program
 
-## 📜 Supported Instructions
+addi x5, x0, 5          # outer counter = 5
+addi x6, x0, 1          # accumulator = 1
+addi x11, x0, 0x180     # result memory address = 0x180
+
+# main_loop:
+beq  x5, x0, store_final_result
+
+addi x8, x6, 0          # x8 = x6
+addi x9, x5, 0          # x9 = x5
+addi x10, x0, 0         # x10 = 0
+
+# multiply_loop:
+beq  x9, x0, multiply_done
+add  x10, x10, x8
+addi x9, x9, -1
+jal  x0, multiply_loop
+
+# multiply_done:
+addi x6, x10, 0
+addi x5, x5, -1
+jal  x0, main_loop
+
+# store_final_result:
+sw   x6, 0(x11)
+jal  x0, 0              # halt (infinite loop)
+
+
+##  Supported Instructions
 Currently supports the RV32I subset, including:
 
 Arithmetic: ADD, SUB, AND, OR, XOR, SRL, SLL, SAR.
