@@ -28,18 +28,25 @@ riscv-core/
 
 
 ---
-## Test Program
+## 🧪 Test Program
 
-addi x5, x0, 5          # outer counter = 5
-addi x6, x0, 1          # accumulator = 1
-addi x11, x0, 0x180     # result memory address = 0x180
+<details>
+<summary><b>Click to view sample RISC-V test program 🔽</b></summary>
+
+<br>
+
+### 🧠 Assembly
+
+# multiply-accumulate test
+addi x5, x0, 5
+addi x6, x0, 1
+addi x11, x0, 0x180
 
 # main_loop:
 beq  x5, x0, store_final_result
-
-addi x8, x6, 0          # x8 = x6
-addi x9, x5, 0          # x9 = x5
-addi x10, x0, 0         # x10 = 0
+addi x8, x6, 0
+addi x9, x5, 0
+addi x10, x0, 0
 
 # multiply_loop:
 beq  x9, x0, multiply_done
@@ -54,7 +61,8 @@ jal  x0, main_loop
 
 # store_final_result:
 sw   x6, 0(x11)
-jal  x0, 0              # halt (infinite loop)
+jal  x0, 0
+</details> ```
 
 
 ##  Supported Instructions
