@@ -26,6 +26,22 @@ riscv-core/
 ├── README.md  
 
 
+---
+##  Supported Instructions
+Currently supports the RV32I subset, including:
+
+Arithmetic: ADD, SUB, AND, OR, XOR, SRL, SLL, SAR.
+
+Immediate: ADDI, ANDI, ORI, XORI, SLLI , SRLI, SRAI.
+
+Load/Store: LW, SW
+
+Control flow: BEQ, BNE, BLT, BGE ,JAL
+
+---
+
+## Architecture
+It is heavily inspired from the one mentioned in Computer Organization and **Design – Patterson & Hennessy** with slight modifications in control signal by using a Flag register in ALU to implement BLT,BGE etc and each component is written in verilog with a modular design Philosophy making it easy to test each component indepently.
 
 ---
 ## 🧠 Test Program
@@ -52,33 +68,6 @@ FFF28293 // pc=30: addi x5, x5, -1
 FD9FF06F // pc=34: jal x0, -40 (target 0x0C main_loop)
 0065A023 // pc=38: sw x6, 0(x11) // store_final_result
 0000006F // pc=3C: jal x0, 0 (target 0x3C end_halt)
- ```
-
-##  Supported Instructions
-Currently supports the RV32I subset, including:
-
-Arithmetic: ADD, SUB, AND, OR, XOR, SRL, SLL, SAR.
-
-Immediate: ADDI, ANDI, ORI, XORI, SLLI , SRLI, SRAI.
-
-Load/Store: LW, SW
-
-Control flow: BEQ, BNE, BLT, BGE ,JAL
-
----
-
-## Architecture
-It is heavily inspired from the one mentioned in Computer Organization and **Design – Patterson & Hennessy** with slight modifications in control signal by using a Flag register in ALU to implement BLT,BGE etc and each component is written in verilog with a modular design Philosophy making it easy to test each component indepently.
-
----
-
-## 🛠️ TODO
--Add support for ECALL, LUI, AUIPC
-
--Add pipelined version
-
--Implement forwarding and hazard detection
-
--Write assembler or loader
-
+```
+![Test Program Result](docs/result.png)
 
