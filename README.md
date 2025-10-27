@@ -4,7 +4,7 @@ Written in Verilog, this project is built for clarity, modularity — ideal for 
 
 ---
 
-## 🔧 Features
+##  Features
 
 - Single-cycle CPU architecture
 - Supports RV32I instruction set
@@ -13,7 +13,7 @@ Written in Verilog, this project is built for clarity, modularity — ideal for 
 - Testbench included for simulation and validation
 
 ---
-## 📁 Directory Structure
+##  Directory Structure
 
 riscv-core/  
 
@@ -44,12 +44,12 @@ Control flow: BEQ, BNE, BLT, BGE ,JAL
 It is heavily inspired from the one mentioned in Computer Organization and **Design – Patterson & Hennessy** with slight modifications in control signal by using a Flag register in ALU to implement BLT,BGE etc and each component is written in verilog with a modular design Philosophy making it easy to test each component indepently.
 
 ---
-## 🧠 Test Program
+##  Test Program
 
-<details>
+<details open>
 <summary>▼ Click to view sample RISC-V test program 🔽</summary>
 
-### 🧩 Assembly
+###  Assembly
 
 ```
 00500293 // pc=00: addi x5, x0, 5
